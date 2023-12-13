@@ -10,7 +10,7 @@ class Listener:
         self.file = open("goals.txt", "w")
 
     def callback(self, data):
-        message_str = "{}, {} ,{}, {}, {}, {}\n".format(
+        message_str = "{} {} {} {} {} {}\n".format(
             data.pose.position.x, data.pose.position.y,
             data.pose.orientation.x, data.pose.orientation.y, data.pose.orientation.z, data.pose.orientation.w)
         rospy.loginfo(rospy.get_caller_id() + "I heard: \n" + message_str)
